@@ -1,0 +1,16 @@
+[package]
+name = "sitemap_generator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "gzip", "brotli", "rustls-tls"] } # Async HTTP client
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] } # Async runtime
+futures = "0.3"
+scraper = "0.18" # HTML 파싱 라이브러리 (BeautifulSoup과 유사)
+url = "2.5" # URL 파싱 및 조작 라이브러리
+quick-xml = "0.31" # 빠르고 효율적인 XML 생성 라이브러리
+chrono = "0.4" # 날짜 및 시간 처리
+dialoguer = "0.11" # <-- 이 줄을 추가하세요!
